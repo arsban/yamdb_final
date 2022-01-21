@@ -1,6 +1,6 @@
 import datetime
 import os
-import socket
+# import socket
 
 from dotenv import load_dotenv
 
@@ -11,10 +11,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs')
 
 
-if socket.gethostname() == os.getenv('DOMAIN'):
-    DEBUG = False
-else:
-    DEBUG = True
+# if socket.gethostname() == os.getenv('DOMAIN'):
+#     DEBUG = False
+# else:
+#     DEBUG = True
+
+DEBUG = False  # с той конструкцие что выше, не проходит pytest от практикума. нужно чтобы был False
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='*')
 
