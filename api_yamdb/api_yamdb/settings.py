@@ -1,5 +1,6 @@
 import datetime
 import os
+import socket
 
 from dotenv import load_dotenv
 
@@ -9,9 +10,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs')
 
-DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'web', ]
+if socket.gethostname() == os.getenv('DOMAIN'):
+    DEBUG = False
+else:
+    DEBUG = True
+
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='*')
 
 
 # Application definition
@@ -98,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-# TIME_ZONE = 'UTC'
 TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
