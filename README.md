@@ -93,10 +93,6 @@ DB_PORT=5432 # порт для подключения к БД
 ## Описание команд для запуска приложения в контейнерах
 
 ```
-cd infra
-```
-
-```
 docker-compose up -d --build 
 ```
 
@@ -111,7 +107,7 @@ docker-compose exec web python manage.py createsuperuser
 ```
 docker-compose exec web python manage.py collectstatic --no-input 
 ```
-
+проект доступен по ссылке http://51.250.25.57
 
 ###### Над проектом работали:
 - **Подпорин Георгий** - https://vk.com/akakiy.druz
