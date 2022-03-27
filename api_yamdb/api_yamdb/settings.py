@@ -16,7 +16,6 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='*').split()
-print(ALLOWED_HOSTS)
 
 # Application definition
 
