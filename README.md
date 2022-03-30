@@ -107,8 +107,8 @@ docker-compose exec web python manage.py createsuperuser
 ```
 docker-compose exec web python manage.py collectstatic --no-input 
 ```
-проект доступен по ссылке http://51.250.107.36/admin/
-а так же документация по ссылке http://51.250.107.36/redoc/
+проект доступен по ссылке http://51.250.98.104/admin/
+а так же документация по ссылке http://51.250.98.104/redoc/
 
 ###### Над проектом работали:
 - **Подпорин Георгий** - https://vk.com/akakiy.druz
